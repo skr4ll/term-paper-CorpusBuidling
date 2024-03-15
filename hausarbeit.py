@@ -53,7 +53,7 @@ youtube = build('youtube', 'v3', credentials=credentials)
 
 request = youtube.playlistItems().list(
     part="contentDetails",
-    playlistId="PLpkXaq_xdxJuURxhHDB0ptJcYdtfa-zZy",
+    playlistId="ID",
     maxResults='1000',
     prettyPrint="true"
 )
@@ -213,6 +213,6 @@ for video_id in video_ids:
     transcript = download_transcript(video_id)
     if transcript:
         transcripts.append(transcript)
-output_folder = "corpus/4-west"
+output_folder = "FOLDER"
 # Aufruf der Kernfunktion, zur Verarbeitung (tagging, markup und schreiben in eine Textdatei)
 create_corpus_file(transcripts, video_metadata.values(), output_folder)
