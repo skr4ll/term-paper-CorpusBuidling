@@ -102,6 +102,9 @@ def remove_brackets(text):
 
 
 # Kernfunktion zur Verarbeitung der Transkripte
+
+# TODO Pronomen wie "s'" auch abfangen. Diese werden auch zu 2 Token
+# Daher wurden einige Fälle nicht annotiert
 def create_corpus_file(transcripts, metadata, output_folder):
     negator_words = ["pas", "plus", "guère", "point", "jamais", "rien", "aucun"]
     for i, (transcript, meta) in enumerate(zip(transcripts, metadata)):
